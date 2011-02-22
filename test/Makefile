@@ -119,29 +119,53 @@ cpp_phone_bill_tests/fast:
 	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/build
 .PHONY : cpp_phone_bill_tests/fast
 
-call_data/CallDataReaderTest.o: call_data/CallDataReaderTest.cc.o
-.PHONY : call_data/CallDataReaderTest.o
+call_data/FileBasedCallDataParserTest.o: call_data/FileBasedCallDataParserTest.cc.o
+.PHONY : call_data/FileBasedCallDataParserTest.o
 
 # target to build an object file
-call_data/CallDataReaderTest.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallDataReaderTest.cc.o
-.PHONY : call_data/CallDataReaderTest.cc.o
+call_data/FileBasedCallDataParserTest.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/FileBasedCallDataParserTest.cc.o
+.PHONY : call_data/FileBasedCallDataParserTest.cc.o
 
-call_data/CallDataReaderTest.i: call_data/CallDataReaderTest.cc.i
-.PHONY : call_data/CallDataReaderTest.i
+call_data/FileBasedCallDataParserTest.i: call_data/FileBasedCallDataParserTest.cc.i
+.PHONY : call_data/FileBasedCallDataParserTest.i
 
 # target to preprocess a source file
-call_data/CallDataReaderTest.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallDataReaderTest.cc.i
-.PHONY : call_data/CallDataReaderTest.cc.i
+call_data/FileBasedCallDataParserTest.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/FileBasedCallDataParserTest.cc.i
+.PHONY : call_data/FileBasedCallDataParserTest.cc.i
 
-call_data/CallDataReaderTest.s: call_data/CallDataReaderTest.cc.s
-.PHONY : call_data/CallDataReaderTest.s
+call_data/FileBasedCallDataParserTest.s: call_data/FileBasedCallDataParserTest.cc.s
+.PHONY : call_data/FileBasedCallDataParserTest.s
 
 # target to generate assembly for a file
-call_data/CallDataReaderTest.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallDataReaderTest.cc.s
-.PHONY : call_data/CallDataReaderTest.cc.s
+call_data/FileBasedCallDataParserTest.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/FileBasedCallDataParserTest.cc.s
+.PHONY : call_data/FileBasedCallDataParserTest.cc.s
+
+run_all_unit_test.o: run_all_unit_test.cc.o
+.PHONY : run_all_unit_test.o
+
+# target to build an object file
+run_all_unit_test.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/run_all_unit_test.cc.o
+.PHONY : run_all_unit_test.cc.o
+
+run_all_unit_test.i: run_all_unit_test.cc.i
+.PHONY : run_all_unit_test.i
+
+# target to preprocess a source file
+run_all_unit_test.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/run_all_unit_test.cc.i
+.PHONY : run_all_unit_test.cc.i
+
+run_all_unit_test.s: run_all_unit_test.cc.s
+.PHONY : run_all_unit_test.s
+
+# target to generate assembly for a file
+run_all_unit_test.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/run_all_unit_test.cc.s
+.PHONY : run_all_unit_test.cc.s
 
 # Help Target
 help:
@@ -153,9 +177,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... call_data/CallDataReaderTest.o"
-	@echo "... call_data/CallDataReaderTest.i"
-	@echo "... call_data/CallDataReaderTest.s"
+	@echo "... call_data/FileBasedCallDataParserTest.o"
+	@echo "... call_data/FileBasedCallDataParserTest.i"
+	@echo "... call_data/FileBasedCallDataParserTest.s"
+	@echo "... run_all_unit_test.o"
+	@echo "... run_all_unit_test.i"
+	@echo "... run_all_unit_test.s"
 .PHONY : help
 
 

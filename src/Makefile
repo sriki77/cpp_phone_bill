@@ -119,29 +119,53 @@ cpp_phone_bill/fast:
 	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/build
 .PHONY : cpp_phone_bill/fast
 
-call_data/CallDataReader.o: call_data/CallDataReader.cc.o
-.PHONY : call_data/CallDataReader.o
+call_data/CallRecord.o: call_data/CallRecord.cc.o
+.PHONY : call_data/CallRecord.o
 
 # target to build an object file
-call_data/CallDataReader.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallDataReader.cc.o
-.PHONY : call_data/CallDataReader.cc.o
+call_data/CallRecord.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.o
+.PHONY : call_data/CallRecord.cc.o
 
-call_data/CallDataReader.i: call_data/CallDataReader.cc.i
-.PHONY : call_data/CallDataReader.i
+call_data/CallRecord.i: call_data/CallRecord.cc.i
+.PHONY : call_data/CallRecord.i
 
 # target to preprocess a source file
-call_data/CallDataReader.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallDataReader.cc.i
-.PHONY : call_data/CallDataReader.cc.i
+call_data/CallRecord.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.i
+.PHONY : call_data/CallRecord.cc.i
 
-call_data/CallDataReader.s: call_data/CallDataReader.cc.s
-.PHONY : call_data/CallDataReader.s
+call_data/CallRecord.s: call_data/CallRecord.cc.s
+.PHONY : call_data/CallRecord.s
 
 # target to generate assembly for a file
-call_data/CallDataReader.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallDataReader.cc.s
-.PHONY : call_data/CallDataReader.cc.s
+call_data/CallRecord.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.s
+.PHONY : call_data/CallRecord.cc.s
+
+call_data/FileBasedCallDataParser.o: call_data/FileBasedCallDataParser.cc.o
+.PHONY : call_data/FileBasedCallDataParser.o
+
+# target to build an object file
+call_data/FileBasedCallDataParser.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/FileBasedCallDataParser.cc.o
+.PHONY : call_data/FileBasedCallDataParser.cc.o
+
+call_data/FileBasedCallDataParser.i: call_data/FileBasedCallDataParser.cc.i
+.PHONY : call_data/FileBasedCallDataParser.i
+
+# target to preprocess a source file
+call_data/FileBasedCallDataParser.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/FileBasedCallDataParser.cc.i
+.PHONY : call_data/FileBasedCallDataParser.cc.i
+
+call_data/FileBasedCallDataParser.s: call_data/FileBasedCallDataParser.cc.s
+.PHONY : call_data/FileBasedCallDataParser.s
+
+# target to generate assembly for a file
+call_data/FileBasedCallDataParser.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/FileBasedCallDataParser.cc.s
+.PHONY : call_data/FileBasedCallDataParser.cc.s
 
 # Help Target
 help:
@@ -153,9 +177,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... call_data/CallDataReader.o"
-	@echo "... call_data/CallDataReader.i"
-	@echo "... call_data/CallDataReader.s"
+	@echo "... call_data/CallRecord.o"
+	@echo "... call_data/CallRecord.i"
+	@echo "... call_data/CallRecord.s"
+	@echo "... call_data/FileBasedCallDataParser.o"
+	@echo "... call_data/FileBasedCallDataParser.i"
+	@echo "... call_data/FileBasedCallDataParser.s"
 .PHONY : help
 
 
