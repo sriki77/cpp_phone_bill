@@ -8,14 +8,14 @@ using namespace CallData;
 #define TEST_CASE CallTypeTest
 
 GTEST(shouldProvideThreeCallTypes) {
-    ASSERT_STREQ("LOCAL",CallType::LOCAL);
+    ASSERT_STREQ("LOC",CallType::LOCAL);
     ASSERT_STREQ("STD",CallType::STD);
     ASSERT_STREQ("ISD",CallType::ISD);
 }
 
 GTEST(shouldConvertStringToCallType) {
     ASSERT_EQ(CallType::STD,CallType::toCallType("STD"));
-    ASSERT_EQ(CallType::LOCAL,CallType::toCallType("LOCAL"));
+    ASSERT_EQ(CallType::LOCAL,CallType::toCallType("LOC"));
     ASSERT_EQ(CallType::ISD,CallType::toCallType("ISD"));
 }
 

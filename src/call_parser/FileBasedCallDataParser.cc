@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iomanip>
 #include <boost/xpressive/xpressive.hpp>
+#include <boost/lexical_cast.hpp>
 
 using namespace std;
 using namespace boost::xpressive;
@@ -30,8 +31,10 @@ namespace CallParser {
         string line;
 
         while (std::getline(recFile, line)) {
-            cout << line << endl;
             CallRecord* callRec = toCallRecord(line);
+            if(callRec != NULL){
+                callRecordList->push_back(callRec);
+            }
         }
 
         recFile.close();
@@ -47,7 +50,9 @@ namespace CallParser {
         CallRecord* callRec=NULL;
 
         if (regex_match(line, what, rex)) {
-//            callRec=new CallRecord;
+            callRec=new CallRecord(what[1],CallType::toCallType(what[2]),
+                    boost::lexical_cast<int>(what[3]),what[4],what[5]);
+            return callRec;
         }
         return NULL;
     }

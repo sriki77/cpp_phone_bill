@@ -119,6 +119,30 @@ cpp_phone_bill_tests/fast:
 	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/build
 .PHONY : cpp_phone_bill_tests/fast
 
+call_data/CallRecordTest.o: call_data/CallRecordTest.cc.o
+.PHONY : call_data/CallRecordTest.o
+
+# target to build an object file
+call_data/CallRecordTest.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallRecordTest.cc.o
+.PHONY : call_data/CallRecordTest.cc.o
+
+call_data/CallRecordTest.i: call_data/CallRecordTest.cc.i
+.PHONY : call_data/CallRecordTest.i
+
+# target to preprocess a source file
+call_data/CallRecordTest.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallRecordTest.cc.i
+.PHONY : call_data/CallRecordTest.cc.i
+
+call_data/CallRecordTest.s: call_data/CallRecordTest.cc.s
+.PHONY : call_data/CallRecordTest.s
+
+# target to generate assembly for a file
+call_data/CallRecordTest.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallRecordTest.cc.s
+.PHONY : call_data/CallRecordTest.cc.s
+
 call_data/CallTypeTest.o: call_data/CallTypeTest.cc.o
 .PHONY : call_data/CallTypeTest.o
 
@@ -201,6 +225,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... call_data/CallRecordTest.o"
+	@echo "... call_data/CallRecordTest.i"
+	@echo "... call_data/CallRecordTest.s"
 	@echo "... call_data/CallTypeTest.o"
 	@echo "... call_data/CallTypeTest.i"
 	@echo "... call_data/CallTypeTest.s"

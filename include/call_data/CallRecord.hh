@@ -10,7 +10,7 @@ namespace CallData {
 	class CallRecord{
 		public:
 	        CallRecord(string date,CallType callType,int duration,string caller, string callerNum);
-
+	        operator string() const;
 		private:
 	        string _date;
 	        CallType _callType;
@@ -19,6 +19,11 @@ namespace CallData {
 	        string _callerNum;
 	};
 }
+
+
+
+
+
 
 
 #endif /* CALLRECORD_HH_ */

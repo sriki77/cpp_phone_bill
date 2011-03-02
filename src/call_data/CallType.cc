@@ -7,7 +7,7 @@ using namespace std;
 
 namespace CallData {
 
-    const CallType::CallType CallType::LOCAL("LOCAL",0.5);
+    const CallType::CallType CallType::LOCAL("LOC",0.5);
     const CallType::CallType CallType::STD("STD",1);
     const CallType::CallType CallType::ISD("ISD",2);
     const CallType CallType::ALL_CALL_TYPES[] = { LOCAL, STD, ISD };
@@ -20,7 +20,7 @@ namespace CallData {
         _code(code),_costPerMin(costPerMin) {
     }
 
-    CallType CallType::toCallType(string code) {
+    CallType CallType::toCallType(string code)throw(invalid_argument) {
         BOOST_FOREACH(CallType type,ALL_CALL_TYPES)
         {
             if(code==string(type)){
