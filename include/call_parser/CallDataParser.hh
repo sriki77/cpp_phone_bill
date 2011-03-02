@@ -4,9 +4,10 @@
 #include <list>
 using namespace std;
 
-#include "CallRecord.hh"
+#include "call_data/CallRecord.hh"
+using namespace CallData;
 
-namespace CallData {
+namespace CallParser {
     //Represents a Call Data Parser
 	class CallDataParser{
 		public:

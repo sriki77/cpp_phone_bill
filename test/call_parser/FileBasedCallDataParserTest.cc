@@ -3,9 +3,10 @@
 #include <list>
 using namespace std;
 
-#include "call_data/FileBasedCallDataParser.hh"
+#include "call_parser/FileBasedCallDataParser.hh"
 #include "call_data/CallRecord.hh"
 using namespace CallData;
+using namespace CallParser;
 
 #include "../TestCommon.hh"
 using namespace TestCommon;

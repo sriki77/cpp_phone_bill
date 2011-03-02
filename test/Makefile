@@ -119,29 +119,53 @@ cpp_phone_bill_tests/fast:
 	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/build
 .PHONY : cpp_phone_bill_tests/fast
 
-call_data/FileBasedCallDataParserTest.o: call_data/FileBasedCallDataParserTest.cc.o
-.PHONY : call_data/FileBasedCallDataParserTest.o
+call_data/CallTypeTest.o: call_data/CallTypeTest.cc.o
+.PHONY : call_data/CallTypeTest.o
 
 # target to build an object file
-call_data/FileBasedCallDataParserTest.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/FileBasedCallDataParserTest.cc.o
-.PHONY : call_data/FileBasedCallDataParserTest.cc.o
+call_data/CallTypeTest.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallTypeTest.cc.o
+.PHONY : call_data/CallTypeTest.cc.o
 
-call_data/FileBasedCallDataParserTest.i: call_data/FileBasedCallDataParserTest.cc.i
-.PHONY : call_data/FileBasedCallDataParserTest.i
+call_data/CallTypeTest.i: call_data/CallTypeTest.cc.i
+.PHONY : call_data/CallTypeTest.i
 
 # target to preprocess a source file
-call_data/FileBasedCallDataParserTest.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/FileBasedCallDataParserTest.cc.i
-.PHONY : call_data/FileBasedCallDataParserTest.cc.i
+call_data/CallTypeTest.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallTypeTest.cc.i
+.PHONY : call_data/CallTypeTest.cc.i
 
-call_data/FileBasedCallDataParserTest.s: call_data/FileBasedCallDataParserTest.cc.s
-.PHONY : call_data/FileBasedCallDataParserTest.s
+call_data/CallTypeTest.s: call_data/CallTypeTest.cc.s
+.PHONY : call_data/CallTypeTest.s
 
 # target to generate assembly for a file
-call_data/FileBasedCallDataParserTest.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/FileBasedCallDataParserTest.cc.s
-.PHONY : call_data/FileBasedCallDataParserTest.cc.s
+call_data/CallTypeTest.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_data/CallTypeTest.cc.s
+.PHONY : call_data/CallTypeTest.cc.s
+
+call_parser/FileBasedCallDataParserTest.o: call_parser/FileBasedCallDataParserTest.cc.o
+.PHONY : call_parser/FileBasedCallDataParserTest.o
+
+# target to build an object file
+call_parser/FileBasedCallDataParserTest.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_parser/FileBasedCallDataParserTest.cc.o
+.PHONY : call_parser/FileBasedCallDataParserTest.cc.o
+
+call_parser/FileBasedCallDataParserTest.i: call_parser/FileBasedCallDataParserTest.cc.i
+.PHONY : call_parser/FileBasedCallDataParserTest.i
+
+# target to preprocess a source file
+call_parser/FileBasedCallDataParserTest.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_parser/FileBasedCallDataParserTest.cc.i
+.PHONY : call_parser/FileBasedCallDataParserTest.cc.i
+
+call_parser/FileBasedCallDataParserTest.s: call_parser/FileBasedCallDataParserTest.cc.s
+.PHONY : call_parser/FileBasedCallDataParserTest.s
+
+# target to generate assembly for a file
+call_parser/FileBasedCallDataParserTest.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f test/CMakeFiles/cpp_phone_bill_tests.dir/build.make test/CMakeFiles/cpp_phone_bill_tests.dir/call_parser/FileBasedCallDataParserTest.cc.s
+.PHONY : call_parser/FileBasedCallDataParserTest.cc.s
 
 run_all_unit_test.o: run_all_unit_test.cc.o
 .PHONY : run_all_unit_test.o
@@ -177,9 +201,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... call_data/FileBasedCallDataParserTest.o"
-	@echo "... call_data/FileBasedCallDataParserTest.i"
-	@echo "... call_data/FileBasedCallDataParserTest.s"
+	@echo "... call_data/CallTypeTest.o"
+	@echo "... call_data/CallTypeTest.i"
+	@echo "... call_data/CallTypeTest.s"
+	@echo "... call_parser/FileBasedCallDataParserTest.o"
+	@echo "... call_parser/FileBasedCallDataParserTest.i"
+	@echo "... call_parser/FileBasedCallDataParserTest.s"
 	@echo "... run_all_unit_test.o"
 	@echo "... run_all_unit_test.i"
 	@echo "... run_all_unit_test.s"

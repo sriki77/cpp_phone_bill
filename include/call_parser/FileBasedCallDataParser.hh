@@ -6,7 +6,7 @@ using namespace std;
 
 #include "CallDataParser.hh"
 
-namespace CallData {
+namespace CallParser {
 
 	class FileBasedCallDataParser : public CallDataParser {
 
@@ -15,6 +15,8 @@ namespace CallData {
 	      ~FileBasedCallDataParser();
 	       virtual list<CallRecord*>* parseRecords();
 		private:
+	       CallRecord* toCallRecord(string line);
+
 	       string _fileName;
 	};
 }
