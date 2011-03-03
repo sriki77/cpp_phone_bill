@@ -4,6 +4,7 @@
 #include <fstream>
 #include <boost/iostreams/filtering_stream.hpp>
 #include <boost/range/iterator_range.hpp>
+#include <boost/filesystem/operations.hpp>
 using namespace std;
 namespace io = boost::iostreams;
 
@@ -14,12 +15,15 @@ using namespace CallParser;
 
 #include "../TestCommon.hh"
 using namespace TestCommon;
+using namespace boost::filesystem;
 
 #define TEST_CASE FileBasedCallDataParserTest
 
 GTEST(shouldGenerateCallRecordForValidInputFile)
 {
-    const char *data_file_name = "test/call_parser/call_data_small.txt";
+    const char *if_cur_dir_is_root = "test/call_parser/call_data_small.txt";
+    const char *if_cur_dir_is_test = "call_parser/call_data_small.txt";
+    const char *data_file_name=exists(if_cur_dir_is_root)?if_cur_dir_is_root:if_cur_dir_is_test;
     CallDataParser *dataParser = new FileBasedCallDataParser(data_file_name);
     list<CallRecord*>* dataRecords = dataParser->parseRecords();
 
