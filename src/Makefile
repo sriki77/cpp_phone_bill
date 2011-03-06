@@ -119,6 +119,54 @@ cpp_phone_bill/fast:
 	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/build
 .PHONY : cpp_phone_bill/fast
 
+call_cost/CallCostCalculator.o: call_cost/CallCostCalculator.cc.o
+.PHONY : call_cost/CallCostCalculator.o
+
+# target to build an object file
+call_cost/CallCostCalculator.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/CallCostCalculator.cc.o
+.PHONY : call_cost/CallCostCalculator.cc.o
+
+call_cost/CallCostCalculator.i: call_cost/CallCostCalculator.cc.i
+.PHONY : call_cost/CallCostCalculator.i
+
+# target to preprocess a source file
+call_cost/CallCostCalculator.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/CallCostCalculator.cc.i
+.PHONY : call_cost/CallCostCalculator.cc.i
+
+call_cost/CallCostCalculator.s: call_cost/CallCostCalculator.cc.s
+.PHONY : call_cost/CallCostCalculator.s
+
+# target to generate assembly for a file
+call_cost/CallCostCalculator.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/CallCostCalculator.cc.s
+.PHONY : call_cost/CallCostCalculator.cc.s
+
+call_data/CallCostRecord.o: call_data/CallCostRecord.cc.o
+.PHONY : call_data/CallCostRecord.o
+
+# target to build an object file
+call_data/CallCostRecord.cc.o:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.o
+.PHONY : call_data/CallCostRecord.cc.o
+
+call_data/CallCostRecord.i: call_data/CallCostRecord.cc.i
+.PHONY : call_data/CallCostRecord.i
+
+# target to preprocess a source file
+call_data/CallCostRecord.cc.i:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.i
+.PHONY : call_data/CallCostRecord.cc.i
+
+call_data/CallCostRecord.s: call_data/CallCostRecord.cc.s
+.PHONY : call_data/CallCostRecord.s
+
+# target to generate assembly for a file
+call_data/CallCostRecord.cc.s:
+	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.s
+.PHONY : call_data/CallCostRecord.cc.s
+
 call_data/CallRecord.o: call_data/CallRecord.cc.o
 .PHONY : call_data/CallRecord.o
 
@@ -201,6 +249,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... call_cost/CallCostCalculator.o"
+	@echo "... call_cost/CallCostCalculator.i"
+	@echo "... call_cost/CallCostCalculator.s"
+	@echo "... call_data/CallCostRecord.o"
+	@echo "... call_data/CallCostRecord.i"
+	@echo "... call_data/CallCostRecord.s"
 	@echo "... call_data/CallRecord.o"
 	@echo "... call_data/CallRecord.i"
 	@echo "... call_data/CallRecord.s"

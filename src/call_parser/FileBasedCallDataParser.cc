@@ -50,9 +50,13 @@ namespace CallParser {
         CallRecord* callRec=NULL;
 
         if (regex_match(line, what, rex)) {
-            callRec=new CallRecord(what[1],CallType::toCallType(what[2]),
+            try{
+                callRec=new CallRecord(what[1],CallType::toCallType(what[2]),
                     boost::lexical_cast<int>(what[3]),what[4],what[5]);
-            return callRec;
+                return callRec;
+            }catch(...){
+                cerr<<"Invalid Record Found: "<<line<<endl;
+            }
         }
         return NULL;
     }
