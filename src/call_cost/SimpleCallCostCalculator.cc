@@ -2,15 +2,15 @@
 #include <boost/foreach.hpp>
 using namespace std;
 
-#include "call_cost/CallCostCalculator.hh"
+#include "call_cost/SimpleCallCostCalculator.hh"
 
 namespace CallCost {
 
-    list<CallCostRecord*>* CallCostCalculator::calculateCost(
-            list<CallRecord*> callRecs) {
+    list<CallCostRecord*>* SimpleCallCostCalculator::calculateCost(
+            list<CallRecord*>* callRecs) {
         list<CallCostRecord*>* cosRecList = new list<CallCostRecord*>();
 
-        BOOST_FOREACH(CallRecord* callRec, callRecs)
+        BOOST_FOREACH(CallRecord* callRec, *callRecs)
         {
             double callCost = callRec->callType().costFor(callRec->duration());
             CallCostRecord *costRec = new CallCostRecord(*callRec,callCost);

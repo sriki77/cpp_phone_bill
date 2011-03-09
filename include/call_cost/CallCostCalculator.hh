@@ -10,7 +10,7 @@ using namespace std;
 namespace CallCost {
 	class CallCostCalculator{
 		public:
-	        list<CallCostRecord*>* calculateCost(list<CallRecord*> callRecs);
+	        virtual list<CallCostRecord*>* calculateCost(list<CallRecord*>* callRecs)=0;
 		private:
 	};
 }

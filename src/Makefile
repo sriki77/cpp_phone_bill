@@ -30,24 +30,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/2.8.4/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/Cellar/cmake/2.8.4/bin/cmake -E remove -f
+
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/local/Cellar/cmake/2.8.4/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/srikanth/wip/eclispe_workspace/cpp_phone_bill
+CMAKE_SOURCE_DIR = /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/srikanth/wip/eclispe_workspace/cpp_phone_bill
+CMAKE_BINARY_DIR = /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/Cellar/cmake/2.8.4/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -57,7 +60,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/2.8.4/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -67,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+	/usr/local/Cellar/cmake/2.8.4/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -76,14 +79,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(CMAKE_COMMAND) -E cmake_progress_start /home/srikanth/wip/eclispe_workspace/cpp_phone_bill/CMakeFiles /home/srikanth/wip/eclispe_workspace/cpp_phone_bill/src/CMakeFiles/progress.marks
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/srikanth/wip/eclispe_workspace/cpp_phone_bill/CMakeFiles 0
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(CMAKE_COMMAND) -E cmake_progress_start /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill/CMakeFiles /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill/src/CMakeFiles/progress.marks
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -92,22 +95,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/cpp_phone_bill.dir/rule:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/cpp_phone_bill.dir/rule
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/cpp_phone_bill.dir/rule
 .PHONY : src/CMakeFiles/cpp_phone_bill.dir/rule
 
 # Convenience name for target.
@@ -116,39 +119,39 @@ cpp_phone_bill: src/CMakeFiles/cpp_phone_bill.dir/rule
 
 # fast build rule for target.
 cpp_phone_bill/fast:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/build
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/build
 .PHONY : cpp_phone_bill/fast
 
-call_cost/CallCostCalculator.o: call_cost/CallCostCalculator.cc.o
-.PHONY : call_cost/CallCostCalculator.o
+call_cost/SimpleCallCostCalculator.o: call_cost/SimpleCallCostCalculator.cc.o
+.PHONY : call_cost/SimpleCallCostCalculator.o
 
 # target to build an object file
-call_cost/CallCostCalculator.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/CallCostCalculator.cc.o
-.PHONY : call_cost/CallCostCalculator.cc.o
+call_cost/SimpleCallCostCalculator.cc.o:
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/SimpleCallCostCalculator.cc.o
+.PHONY : call_cost/SimpleCallCostCalculator.cc.o
 
-call_cost/CallCostCalculator.i: call_cost/CallCostCalculator.cc.i
-.PHONY : call_cost/CallCostCalculator.i
+call_cost/SimpleCallCostCalculator.i: call_cost/SimpleCallCostCalculator.cc.i
+.PHONY : call_cost/SimpleCallCostCalculator.i
 
 # target to preprocess a source file
-call_cost/CallCostCalculator.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/CallCostCalculator.cc.i
-.PHONY : call_cost/CallCostCalculator.cc.i
+call_cost/SimpleCallCostCalculator.cc.i:
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/SimpleCallCostCalculator.cc.i
+.PHONY : call_cost/SimpleCallCostCalculator.cc.i
 
-call_cost/CallCostCalculator.s: call_cost/CallCostCalculator.cc.s
-.PHONY : call_cost/CallCostCalculator.s
+call_cost/SimpleCallCostCalculator.s: call_cost/SimpleCallCostCalculator.cc.s
+.PHONY : call_cost/SimpleCallCostCalculator.s
 
 # target to generate assembly for a file
-call_cost/CallCostCalculator.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/CallCostCalculator.cc.s
-.PHONY : call_cost/CallCostCalculator.cc.s
+call_cost/SimpleCallCostCalculator.cc.s:
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_cost/SimpleCallCostCalculator.cc.s
+.PHONY : call_cost/SimpleCallCostCalculator.cc.s
 
 call_data/CallCostRecord.o: call_data/CallCostRecord.cc.o
 .PHONY : call_data/CallCostRecord.o
 
 # target to build an object file
 call_data/CallCostRecord.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.o
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.o
 .PHONY : call_data/CallCostRecord.cc.o
 
 call_data/CallCostRecord.i: call_data/CallCostRecord.cc.i
@@ -156,7 +159,7 @@ call_data/CallCostRecord.i: call_data/CallCostRecord.cc.i
 
 # target to preprocess a source file
 call_data/CallCostRecord.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.i
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.i
 .PHONY : call_data/CallCostRecord.cc.i
 
 call_data/CallCostRecord.s: call_data/CallCostRecord.cc.s
@@ -164,7 +167,7 @@ call_data/CallCostRecord.s: call_data/CallCostRecord.cc.s
 
 # target to generate assembly for a file
 call_data/CallCostRecord.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.s
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallCostRecord.cc.s
 .PHONY : call_data/CallCostRecord.cc.s
 
 call_data/CallRecord.o: call_data/CallRecord.cc.o
@@ -172,7 +175,7 @@ call_data/CallRecord.o: call_data/CallRecord.cc.o
 
 # target to build an object file
 call_data/CallRecord.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.o
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.o
 .PHONY : call_data/CallRecord.cc.o
 
 call_data/CallRecord.i: call_data/CallRecord.cc.i
@@ -180,7 +183,7 @@ call_data/CallRecord.i: call_data/CallRecord.cc.i
 
 # target to preprocess a source file
 call_data/CallRecord.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.i
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.i
 .PHONY : call_data/CallRecord.cc.i
 
 call_data/CallRecord.s: call_data/CallRecord.cc.s
@@ -188,7 +191,7 @@ call_data/CallRecord.s: call_data/CallRecord.cc.s
 
 # target to generate assembly for a file
 call_data/CallRecord.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.s
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallRecord.cc.s
 .PHONY : call_data/CallRecord.cc.s
 
 call_data/CallType.o: call_data/CallType.cc.o
@@ -196,7 +199,7 @@ call_data/CallType.o: call_data/CallType.cc.o
 
 # target to build an object file
 call_data/CallType.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallType.cc.o
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallType.cc.o
 .PHONY : call_data/CallType.cc.o
 
 call_data/CallType.i: call_data/CallType.cc.i
@@ -204,7 +207,7 @@ call_data/CallType.i: call_data/CallType.cc.i
 
 # target to preprocess a source file
 call_data/CallType.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallType.cc.i
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallType.cc.i
 .PHONY : call_data/CallType.cc.i
 
 call_data/CallType.s: call_data/CallType.cc.s
@@ -212,7 +215,7 @@ call_data/CallType.s: call_data/CallType.cc.s
 
 # target to generate assembly for a file
 call_data/CallType.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallType.cc.s
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_data/CallType.cc.s
 .PHONY : call_data/CallType.cc.s
 
 call_parser/FileBasedCallDataParser.o: call_parser/FileBasedCallDataParser.cc.o
@@ -220,7 +223,7 @@ call_parser/FileBasedCallDataParser.o: call_parser/FileBasedCallDataParser.cc.o
 
 # target to build an object file
 call_parser/FileBasedCallDataParser.cc.o:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_parser/FileBasedCallDataParser.cc.o
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_parser/FileBasedCallDataParser.cc.o
 .PHONY : call_parser/FileBasedCallDataParser.cc.o
 
 call_parser/FileBasedCallDataParser.i: call_parser/FileBasedCallDataParser.cc.i
@@ -228,7 +231,7 @@ call_parser/FileBasedCallDataParser.i: call_parser/FileBasedCallDataParser.cc.i
 
 # target to preprocess a source file
 call_parser/FileBasedCallDataParser.cc.i:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_parser/FileBasedCallDataParser.cc.i
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_parser/FileBasedCallDataParser.cc.i
 .PHONY : call_parser/FileBasedCallDataParser.cc.i
 
 call_parser/FileBasedCallDataParser.s: call_parser/FileBasedCallDataParser.cc.s
@@ -236,7 +239,7 @@ call_parser/FileBasedCallDataParser.s: call_parser/FileBasedCallDataParser.cc.s
 
 # target to generate assembly for a file
 call_parser/FileBasedCallDataParser.cc.s:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_parser/FileBasedCallDataParser.cc.s
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(MAKE) -f src/CMakeFiles/cpp_phone_bill.dir/build.make src/CMakeFiles/cpp_phone_bill.dir/call_parser/FileBasedCallDataParser.cc.s
 .PHONY : call_parser/FileBasedCallDataParser.cc.s
 
 # Help Target
@@ -249,9 +252,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... call_cost/CallCostCalculator.o"
-	@echo "... call_cost/CallCostCalculator.i"
-	@echo "... call_cost/CallCostCalculator.s"
+	@echo "... call_cost/SimpleCallCostCalculator.o"
+	@echo "... call_cost/SimpleCallCostCalculator.i"
+	@echo "... call_cost/SimpleCallCostCalculator.s"
 	@echo "... call_data/CallCostRecord.o"
 	@echo "... call_data/CallCostRecord.i"
 	@echo "... call_data/CallCostRecord.s"
@@ -275,6 +278,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/srikanth/wip/eclispe_workspace/cpp_phone_bill && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
