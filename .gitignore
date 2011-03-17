@@ -10,3 +10,6 @@ coverage
 gmon.out
 Debug
 *.swp
+cov.xml
+.cproject
+.project
