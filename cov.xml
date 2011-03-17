@@ -1,0 +1,261 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage
+  SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
+<coverage branch-rate="0.677777777778" line-rate="0.91" timestamp="1300338383" version="gcovr 2.2-prerelease">
+	<sources>
+		<source>
+			.
+		</source>
+	</sources>
+	<packages>
+		<package branch-rate="0.0" complexity="0.0" line-rate="0.5" name="include.call_parser">
+			<classes>
+				<class branch-rate="0.0" complexity="0.0" filename="include/call_parser/CallDataParser.hh" line-rate="0.5" name="CallDataParser_hh">
+					<lines>
+						<line branch="false" hits="3" number="12"/>
+						<line branch="false" hits="0" number="15"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package branch-rate="0.0" complexity="0.0" line-rate="1.0" name="include.call_cost">
+			<classes>
+				<class branch-rate="0.0" complexity="0.0" filename="include/call_cost/CallCostCalculator.hh" line-rate="1.0" name="CallCostCalculator_hh">
+					<lines>
+						<line branch="false" hits="1" number="11"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0.0" filename="include/call_cost/SimpleCallCostCalculator.hh" line-rate="1.0" name="SimpleCallCostCalculator_hh">
+					<lines>
+						<line branch="false" hits="1" number="6"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package branch-rate="0.5" complexity="0.0" line-rate="0.375" name="test.call_cost...">
+			<classes>
+				<class branch-rate="0.5" complexity="0.0" filename="test/call_cost/../TestCommon.hh" line-rate="0.375" name="TestCommon_hh">
+					<lines>
+						<line branch="false" hits="1" number="14"/>
+						<line branch="true" condition-coverage="50% (1/2)" hits="1" number="15">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="1" number="16"/>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="0" number="21"/>
+						<line branch="false" hits="0" number="24"/>
+						<line branch="false" hits="0" number="25"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package branch-rate="0.636363636364" complexity="0.0" line-rate="1.0" name="src.call_cost">
+			<classes>
+				<class branch-rate="0.636363636364" complexity="0.0" filename="src/call_cost/SimpleCallCostCalculator.cc" line-rate="1.0" name="SimpleCallCostCalculator_cc">
+					<lines>
+						<line branch="false" hits="1" number="9"/>
+						<line branch="false" hits="1" number="11"/>
+						<line branch="true" condition-coverage="66% (12/18)" hits="11" number="13">
+							<conditions>
+								<condition coverage="66%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="3" number="15"/>
+						<line branch="false" hits="6" number="16"/>
+						<line branch="false" hits="3" number="17"/>
+						<line branch="false" hits="1" number="20"/>
+						<line branch="true" condition-coverage="50% (2/4)" hits="3" number="23">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package branch-rate="0.0" complexity="0.0" line-rate="1.0" name="include.call_data">
+			<classes>
+				<class branch-rate="0.0" complexity="0.0" filename="include/call_data/CallRecord.hh" line-rate="1.0" name="CallRecord_hh">
+					<lines>
+						<line branch="false" hits="7" number="33"/>
+						<line branch="false" hits="8" number="10"/>
+						<line branch="false" hits="7" number="35"/>
+						<line branch="false" hits="3" number="40"/>
+						<line branch="false" hits="10" number="26"/>
+						<line branch="false" hits="10" number="28"/>
+						<line branch="false" hits="3" number="42"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0.0" filename="include/call_data/CallType.hh" line-rate="1.0" name="CallType_hh">
+					<lines>
+						<line branch="false" hits="109" number="10"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package branch-rate="0.6875" complexity="0.0" line-rate="0.971428571429" name="src.call_data">
+			<classes>
+				<class branch-rate="0.5" complexity="0.0" filename="src/call_data/CallCostRecord.cc" line-rate="1.0" name="CallCostRecord_cc">
+					<lines>
+						<line branch="false" hits="4" number="10"/>
+						<line branch="false" hits="4" number="11"/>
+						<line branch="false" hits="4" number="12"/>
+						<line branch="false" hits="7" number="14"/>
+						<line branch="false" hits="7" number="15"/>
+						<line branch="false" hits="7" number="16"/>
+						<line branch="false" hits="7" number="17"/>
+						<line branch="false" hits="7" number="18"/>
+						<line branch="false" hits="7" number="19"/>
+						<line branch="true" condition-coverage="50% (2/4)" hits="3" number="22">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0.0" filename="src/call_data/CallRecord.cc" line-rate="1.0" name="CallRecord_cc">
+					<lines>
+						<line branch="false" hits="8" number="7"/>
+						<line branch="false" hits="8" number="10"/>
+						<line branch="false" hits="8" number="11"/>
+						<line branch="false" hits="4" number="13"/>
+						<line branch="false" hits="4" number="14"/>
+						<line branch="false" hits="8" number="16"/>
+						<line branch="false" hits="4" number="18"/>
+					</lines>
+				</class>
+				<class branch-rate="0.714285714286" complexity="0.0" filename="src/call_data/CallType.cc" line-rate="0.944444444444" name="CallType_cc">
+					<lines>
+						<line branch="true" condition-coverage="50% (2/4)" hits="3" number="42">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="6" number="35"/>
+						<line branch="false" hits="6" number="37"/>
+						<line branch="false" hits="1" number="10"/>
+						<line branch="false" hits="2" number="11"/>
+						<line branch="false" hits="2" number="12"/>
+						<line branch="true" condition-coverage="100% (2/2)" hits="3" number="13">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="42" number="15"/>
+						<line branch="false" hits="42" number="16"/>
+						<line branch="false" hits="3" number="19"/>
+						<line branch="false" hits="3" number="20"/>
+						<line branch="false" hits="3" number="21"/>
+						<line branch="false" hits="14" number="23"/>
+						<line branch="true" condition-coverage="66% (12/18)" hits="50" number="24">
+							<conditions>
+								<condition coverage="66%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="true" condition-coverage="100% (2/2)" hits="29" number="26">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="11" number="27"/>
+						<line branch="true" condition-coverage="100% (2/2)" hits="0" number="29">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="3" number="31"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package branch-rate="0.833333333333" complexity="0.0" line-rate="0.931034482759" name="src.call_parser">
+			<classes>
+				<class branch-rate="0.833333333333" complexity="0.0" filename="src/call_parser/FileBasedCallDataParser.cc" line-rate="0.931034482759" name="FileBasedCallDataParser_cc">
+					<lines>
+						<line branch="false" hits="3" number="14"/>
+						<line branch="false" hits="3" number="15"/>
+						<line branch="false" hits="3" number="16"/>
+						<line branch="false" hits="0" number="18"/>
+						<line branch="false" hits="0" number="19"/>
+						<line branch="false" hits="3" number="21"/>
+						<line branch="false" hits="3" number="22"/>
+						<line branch="false" hits="3" number="24"/>
+						<line branch="true" condition-coverage="100% (2/2)" hits="6" number="26">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="1" number="27"/>
+						<line branch="false" hits="1" number="28"/>
+						<line branch="false" hits="2" number="31"/>
+						<line branch="true" condition-coverage="100% (2/2)" hits="16" number="33">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="12" number="34"/>
+						<line branch="true" condition-coverage="100% (2/2)" hits="12" number="35">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="6" number="36"/>
+						<line branch="false" hits="2" number="40"/>
+						<line branch="false" hits="2" number="42"/>
+						<line branch="false" hits="12" number="45"/>
+						<line branch="false" hits="12" number="47"/>
+						<line branch="false" hits="12" number="48"/>
+						<line branch="false" hits="12" number="50"/>
+						<line branch="true" condition-coverage="100% (2/2)" hits="12" number="52">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="10" number="55"/>
+						<line branch="false" hits="6" number="56"/>
+						<line branch="false" hits="8" number="57"/>
+						<line branch="false" hits="4" number="58"/>
+						<line branch="false" hits="6" number="61"/>
+						<line branch="true" condition-coverage="50% (2/4)" hits="3" number="64">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package branch-rate="0.636363636364" complexity="0.0" line-rate="1.0" name="test.call_parser...">
+			<classes>
+				<class branch-rate="0.636363636364" complexity="0.0" filename="test/call_parser/../TestCommon.hh" line-rate="1.0" name="TestCommon_hh">
+					<lines>
+						<line branch="false" hits="6" number="14"/>
+						<line branch="true" condition-coverage="50% (1/2)" hits="6" number="15">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="6" number="16"/>
+						<line branch="false" hits="3" number="18"/>
+						<line branch="true" condition-coverage="66% (12/18)" hits="9" number="19">
+							<conditions>
+								<condition coverage="66%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="6" number="21"/>
+						<line branch="true" condition-coverage="50% (1/2)" hits="3" number="24">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump"/>
+							</conditions>
+						</line>
+						<line branch="false" hits="3" number="25"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
+
