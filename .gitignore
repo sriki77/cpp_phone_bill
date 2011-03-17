@@ -9,3 +9,4 @@ Testing
 coverage
 gmon.out
 Debug
+*.swp
