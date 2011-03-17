@@ -22,5 +22,4 @@ GTEST(shouldGenerateValidStringRep) {
     os<<"Total cost: "<<callCost<<endl;
 
     ASSERT_EQ(os.str(),costRec.operator string());
-    ASSERT_EQ(1, 2);
 }
