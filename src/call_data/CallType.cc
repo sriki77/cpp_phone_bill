@@ -7,9 +7,9 @@ using namespace std;
 
 namespace CallData {
 
-    const CallType::CallType CallType::LOCAL("LOC",0.5);
-    const CallType::CallType CallType::STD("STD",1);
-    const CallType::CallType CallType::ISD("ISD",2);
+    const CallType CallType::LOCAL("LOC",0.5);
+    const CallType CallType::STD("STD",1);
+    const CallType CallType::ISD("ISD",2);
     const CallType CallType::ALL_CALL_TYPES[] = { LOCAL, STD, ISD };
 
     CallType::operator const char*() const {

@@ -1,0 +1,10 @@
+Makefile
+CMakeCache.txt
+CMakeFiles
+CTestTestfile.cmake
+cmake_install.cmake
+*.so
+test/cpp_phone_bill_tests
+Testing
+coverage
+gmon.out
